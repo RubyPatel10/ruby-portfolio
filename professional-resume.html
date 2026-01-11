@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ruby Patel - Senior QA Engineer with 7+ years experience in testing across Banking, Insurance, Healthcare, Pharma, and Education domains">
+    <meta name="keywords" content="QA Engineer, Software Testing, Automation, Ruby Patel, Quality Assurance">
+    <meta name="author" content="Ruby Patel">
+    <meta property="og:title" content="Ruby Patel - Senior QA Engineer">
+    <meta property="og:description" content="Professional QA Engineer with 7+ years experience. Expert in test automation, team leadership, and process optimization.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rubypatel.vercel.app">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Ruby Patel - Senior QA Engineer">
+    <meta name="twitter:description" content="Professional QA Engineer with 7+ years experience">
+    <link rel="canonical" href="https://rubypatel.vercel.app">
+    <title>Ruby Patel - Senior QA Engineer | Professional Resume</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #7c3aed;
+            --secondary-color: #5b21b6;
+            --accent-color: #a855f7;
+            --tertiary-color: #ec4899;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #faf7ff;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+            --success-color: #10b981;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-color);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #faf7ff 0%, #f3e8ff 50%, #fce7f3 100%);
+            padding: 100px 2rem 50px;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--tertiary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content .profession {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero-content .intro {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.6rem 1rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            white-space: nowrap;
+            font-size: 0.85rem;
+            justify-content: center;
+            min-width: 100px;
+            flex: 0 0 auto;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
+        }
+
+        .btn-outline {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid white;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.05);
+        }
+
+        .tech-avatar {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 50%, var(--tertiary-color) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-avatar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 70%, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+
+        .tech-avatar i {
+            color: white;
+            font-size: 2.5rem;
+            position: absolute;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .tech-avatar i:nth-child(1) {
+            top: 25%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-delay: 0s;
+        }
+
+        .tech-avatar i:nth-child(2) {
+            bottom: 35%;
+            left: 25%;
+            animation-delay: 1s;
+        }
+
+        .tech-avatar i:nth-child(3) {
+            bottom: 35%;
+            right: 25%;
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) translateX(-50%);
+            }
+            50% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+
+        .tech-avatar i:nth-child(2) {
+            animation-name: floatLeft;
+        }
+
+        .tech-avatar i:nth-child(3) {
+            animation-name: floatRight;
+        }
+
+        @keyframes floatLeft {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes floatRight {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--bg-white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .about-text h3 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-light);
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-category h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            font-size: 1.2rem;
+        }
+
+        .skill-category i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .skill-name {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .skill-level {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--bg-light);
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--tertiary-color));
+            border-radius: 4px;
+            transition: width 1s ease;
+        }
+
+        /* Experience Section */
+        .experience {
+            background: var(--bg-white);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-color);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            width: 45%;
+        }
+
+        .timeline-item:nth-child(even) {
+            margin-left: 55%;
+        }
+
+        .timeline-content {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -20px;
+            border-left-color: var(--bg-light);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -20px;
+            border-right-color: var(--bg-light);
+        }
+
+        .timeline-date {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .company {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .job-description {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-color), var(--tertiary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .project-description {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background: var(--bg-light);
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--bg-white);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .contact-details h4 {
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-details p {
+            color: var(--text-light);
+        }
+
+        .contact-form {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.75rem;
+            }
+
+            .btn {
+                width: 200px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: calc(100% - 40px);
+                margin-left: 40px;
+            }
+
+            .timeline-item:nth-child(even) {
+                margin-left: 40px;
+            }
+
+            .timeline-date {
+                left: 20px;
+                transform: none;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Ruby Patel</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Ruby Patel</h1>
+                <p class="profession">Senior QA Engineer</p>
+                <p class="intro">Passionate QA professional with 7+ years of experience in delivering quality software solutions across Banking, Insurance, Healthcare, Pharma, and Education domains. Expert in test automation, team leadership, and process optimization.</p>
+                <div class="hero-buttons">
+                    <a href="resume-template.html" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-download"></i>
+                        Resume
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i>
+                        Contact
+                    </a>
+                    <a href="#projects" class="btn btn-outline">
+                        <i class="fas fa-eye"></i>
+                        Projects
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-photo tech-avatar">
+                    <i class="fas fa-bug-slash"></i>
+                    <i class="fas fa-code"></i>
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title fade-in">About Me</h2>
+            <p class="section-subtitle fade-in">Dedicated to delivering excellence in software quality assurance</p>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h3>Quality-Driven Professional</h3>
+                    <p>With over 7 years of comprehensive experience in quality assurance, I specialize in ensuring software excellence through innovative testing methodologies and cutting-edge automation frameworks.</p>
+                    <p>My expertise spans across manual testing, test automation, API validation, mobile testing, and database testing. I've successfully led teams, implemented CI/CD processes, and delivered high-quality software solutions for global enterprises.</p>
+                    <p>I thrive in collaborative environments and am passionate about mentoring teams, driving process improvements, and staying ahead of industry trends in software testing.</p>
+                </div>
+                <div class="about-stats fade-in">
+                    <div class="stat-item">
+                        <span class="stat-number">7+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">8+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Domains Expertise</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Team Members Led</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Technical Skills</h2>
+            <p class="section-subtitle fade-in">Comprehensive expertise in modern testing technologies and methodologies</p>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-vial"></i>Testing Expertise</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Manual Testing</span>
+                        <span class="skill-tag">Functional Testing</span>
+                        <span class="skill-tag">Regression Testing</span>
+                        <span class="skill-tag">API Testing</span>
+                        <span class="skill-tag">Mobile Testing</span>
+                        <span class="skill-tag">ETL Testing</span>
+                        <span class="skill-tag">Database Testing</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-robot"></i>Automation & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Selenium WebDriver</span>
+                        <span class="skill-tag">TestNG</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">JMeter</span>
+                        <span class="skill-tag">JIRA</span>
+                        <span class="skill-tag">HP ALM</span>
+                        <span class="skill-tag">Jenkins</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-code"></i>Technical Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Oracle SQL Developer</span>
+                        <span class="skill-tag">Hypercube</span>
+                        <span class="skill-tag">Maven</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-users"></i>Leadership & Process</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Team Leadership</span>
+                        <span class="skill-tag">Client Communication</span>
+                        <span class="skill-tag">Project Management</span>
+                        <span class="skill-tag">Agile/Scrum</span>
+                        <span class="skill-tag">Test Planning</span>
+                        <span class="skill-tag">Process Improvement</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-certificate"></i>Certifications</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ISTQB CTFL</span>
+                        <span class="skill-tag">TOSCA Level 1 & 2</span>
+                        <span class="skill-tag">Automation Anywhere</span>
+                        <span class="skill-tag">UiPath</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title fade-in">Professional Experience</h2>
+            <p class="section-subtitle fade-in">A journey of continuous growth and excellence in quality assurance</p>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">2021 - Present</div>
+                    <div class="timeline-content">
+                        <h3 class="job-title">Quality Engineering Senior Analyst</h3>
+                        <p class="company">Accenture Ltd - Pune, MH</p>
+                        <p class="job-description">Leading ETL testing initiatives and managing cross-functional teams to deliver high-quality software solutions for global clients. Successfully managed and mentored a team of 5 QA professionals, improving team productivity by 40%.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">2020 - 2021</div>
+                    <div class="timeline-content">
+                        <h3 class="job-title">Senior Analyst</h3>
+                        <p class="company">Renewbuy Pvt Ltd - Gurugram, HR</p>
+                        <p class="job-description">Specialized in insurance platform testing with focus on API validation and performance optimization. Performed comprehensive API testing using Postman and JMeter, ensuring 99% API reliability.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">2019 - 2020</div>
+                    <div class="timeline-content">
+                        <h3 class="job-title">Senior Analyst</h3>
+                        <p class="company">BNY Mellon - Pune, MH</p>
+                        <p class="job-description">Focused on financial services testing with emphasis on corporate action processing systems. Ensured compliance with financial regulations (SOX, Basel III) and business requirements.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">2017 - 2019</div>
+                    <div class="timeline-content">
+                        <h3 class="job-title">Quality Analyst</h3>
+                        <p class="company">Cognic Systems - Jabalpur, MP</p>
+                        <p class="job-description">Established automation frameworks and improved testing processes. Single-handedly managed complete mobile testing projects from requirement analysis to production delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Key Projects</h2>
+            <p class="section-subtitle fade-in">Showcasing impactful testing solutions across diverse domains</p>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">ETL Data Validation</h3>
+                        <p class="project-description">Led ETL testing using Oracle SQL Developer and Hypercube for data integrity validation across enterprise systems at Accenture.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Oracle SQL</span>
+                            <span class="tech-tag">Hypercube</span>
+                            <span class="tech-tag">ETL Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Insurance Platform Testing</h3>
+                        <p class="project-description">Performed API testing using Postman and JMeter for insurance platforms at Renewbuy, ensuring system reliability.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Postman</span>
+                            <span class="tech-tag">JMeter</span>
+                            <span class="tech-tag">API Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Banking System Testing</h3>
+                        <p class="project-description">Manual testing of corporate action processing systems at BNY Mellon with focus on financial compliance.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Manual Testing</span>
+                            <span class="tech-tag">HP ALM</span>
+                            <span class="tech-tag">Banking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Mobile Application Testing</h3>
+                        <p class="project-description">End-to-end mobile testing projects at Cognic Systems, handling client communications and team coordination.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Mobile Testing</span>
+                            <span class="tech-tag">Client Management</span>
+                            <span class="tech-tag">Team Lead</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Get In Touch</h2>
+            <p class="section-subtitle fade-in">Ready to discuss opportunities and collaborate on quality initiatives</p>
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>rubypatel.rp10@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+91 9579455343</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Open to All Locations + Remote</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Availability</h4>
+                            <p>Open for Senior/Lead QA Opportunities</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form fade-in">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="social-links fade-in">
+                <a href="https://www.linkedin.com/in/ruby-patel-a1721b105/" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/rubypatel" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:rubypatel.rp10@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+919579455343" class="social-link">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ruby Patel. All rights reserved. | Senior QA Engineer | <a href="https://rubypatel.vercel.app" style="color: #a855f7;">rubypatel.vercel.app</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Security measures
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('selectstart', e => e.preventDefault());
+        document.addEventListener('dragstart', e => e.preventDefault());
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.keyCode === 123 || 
+                (e.ctrlKey && e.shiftKey && e.keyCode === 73) ||
+                (e.ctrlKey && e.keyCode === 85) ||
+                (e.ctrlKey && e.keyCode === 83) ||
+                (e.ctrlKey && e.keyCode === 65) ||
+                (e.ctrlKey && e.keyCode === 67)) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active navigation
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Fade in animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Contact form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        // Skill bar animation
+        const skillBars = document.querySelectorAll('.skill-progress');
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const width = entry.target.style.width;
+                    entry.target.style.width = '0%';
+                    setTimeout(() => {
+                        entry.target.style.width = width;
+                    }, 200);
+                }
+            });
+        });
+
+        skillBars.forEach(bar => {
+            skillObserver.observe(bar);
+        });
+    </script>
+</body>
+</html>
